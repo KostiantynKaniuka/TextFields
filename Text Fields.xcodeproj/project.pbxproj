@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		E72AB85D2861C4D400F1F70C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB85C2861C4D400F1F70C /* AppDelegate.swift */; };
 		E72AB85F2861C4D400F1F70C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB85E2861C4D400F1F70C /* SceneDelegate.swift */; };
-		E72AB8612861C4D400F1F70C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB8602861C4D400F1F70C /* ViewController.swift */; };
+		E72AB8612861C4D400F1F70C /* TextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB8602861C4D400F1F70C /* TextFieldsViewController.swift */; };
 		E72AB8642861C4D400F1F70C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72AB8622861C4D400F1F70C /* Main.storyboard */; };
 		E72AB8662861C4D700F1F70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72AB8652861C4D700F1F70C /* Assets.xcassets */; };
 		E72AB8692861C4D700F1F70C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72AB8672861C4D700F1F70C /* LaunchScreen.storyboard */; };
 		E72AB8742861C4D700F1F70C /* Text_FieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB8732861C4D700F1F70C /* Text_FieldsTests.swift */; };
 		E72AB87E2861C4D700F1F70C /* Text_FieldsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB87D2861C4D700F1F70C /* Text_FieldsUITests.swift */; };
-		E72AB8802861C4D700F1F70C /* Text_FieldsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB87F2861C4D700F1F70C /* Text_FieldsUITestsLaunchTests.swift */; };
+		E7D31F7E28620A4F00849424 /* TextFieldLogicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D31F7D28620A4F00849424 /* TextFieldLogicManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		E72AB8592861C4D400F1F70C /* Text Fields.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Fields.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72AB85C2861C4D400F1F70C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E72AB85E2861C4D400F1F70C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E72AB8602861C4D400F1F70C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E72AB8602861C4D400F1F70C /* TextFieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsViewController.swift; sourceTree = "<group>"; };
 		E72AB8632861C4D400F1F70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E72AB8652861C4D700F1F70C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E72AB8682861C4D700F1F70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		E72AB8732861C4D700F1F70C /* Text_FieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsTests.swift; sourceTree = "<group>"; };
 		E72AB8792861C4D700F1F70C /* Text FieldsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72AB87D2861C4D700F1F70C /* Text_FieldsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsUITests.swift; sourceTree = "<group>"; };
-		E72AB87F2861C4D700F1F70C /* Text_FieldsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7D31F7D28620A4F00849424 /* TextFieldLogicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLogicManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +101,9 @@
 			children = (
 				E72AB85C2861C4D400F1F70C /* AppDelegate.swift */,
 				E72AB85E2861C4D400F1F70C /* SceneDelegate.swift */,
-				E72AB8602861C4D400F1F70C /* ViewController.swift */,
-				E72AB8622861C4D400F1F70C /* Main.storyboard */,
-				E72AB8652861C4D700F1F70C /* Assets.xcassets */,
-				E72AB8672861C4D700F1F70C /* LaunchScreen.storyboard */,
+				E7D31F7F28620A5A00849424 /* Model */,
+				E7D31F7C28620A0400849424 /* Controller */,
+				E7D31F7B286209F300849424 /* View */,
 				E72AB86A2861C4D700F1F70C /* Info.plist */,
 			);
 			path = "Text Fields";
@@ -122,9 +121,34 @@
 			isa = PBXGroup;
 			children = (
 				E72AB87D2861C4D700F1F70C /* Text_FieldsUITests.swift */,
-				E72AB87F2861C4D700F1F70C /* Text_FieldsUITestsLaunchTests.swift */,
 			);
 			path = "Text FieldsUITests";
+			sourceTree = "<group>";
+		};
+		E7D31F7B286209F300849424 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E72AB8622861C4D400F1F70C /* Main.storyboard */,
+				E72AB8652861C4D700F1F70C /* Assets.xcassets */,
+				E72AB8672861C4D700F1F70C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E7D31F7C28620A0400849424 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E72AB8602861C4D400F1F70C /* TextFieldsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E7D31F7F28620A5A00849424 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7D31F7D28620A4F00849424 /* TextFieldLogicManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E72AB8612861C4D400F1F70C /* ViewController.swift in Sources */,
+				E72AB8612861C4D400F1F70C /* TextFieldsViewController.swift in Sources */,
+				E7D31F7E28620A4F00849424 /* TextFieldLogicManager.swift in Sources */,
 				E72AB85D2861C4D400F1F70C /* AppDelegate.swift in Sources */,
 				E72AB85F2861C4D400F1F70C /* SceneDelegate.swift in Sources */,
 			);
@@ -276,7 +301,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E72AB8802861C4D700F1F70C /* Text_FieldsUITestsLaunchTests.swift in Sources */,
 				E72AB87E2861C4D700F1F70C /* Text_FieldsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
