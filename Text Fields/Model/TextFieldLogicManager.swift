@@ -9,19 +9,17 @@ import UIKit
 import SafariServices
 
 class TextFieldLogicManager {
-    // No Digits Input
+    // MARK: -  No Digits Input
     func noDigits(userInput: String) -> Bool {
         return !userInput.contains(where: {$0.isNumber})
     }
-    
-    //Input limited
+    // MARK: - Input limited
     var input = 10
     
     func limitInput(lengh: Int) -> Int {
         input = 10 - lengh
         return input
     }
-    
     
     func changeTextColor(text: String) -> NSMutableAttributedString {
         let rangeOfExtraText = NSRange(location: 10, length: text.utf16.count - 10)
@@ -33,8 +31,7 @@ class TextFieldLogicManager {
         }
         return attributedString
     }
-    
-    //Letters-Numbers
+    // MARK: - Letters-Numbers
     let separator = "-"
     let separatorIndex = 5
     var isSeparatorAdded = false
@@ -52,8 +49,7 @@ class TextFieldLogicManager {
         }
         return string.isEmpty || NSPredicate(format: format, regex).evaluate(with: text)
     }
-    
-    //Web Link
+    // MARK: - Web Link
     func checkUrlValidation(input: String) -> String? {
         var url = String()
         let dataDetector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
@@ -82,12 +78,10 @@ class TextFieldLogicManager {
             viewController.present(safariVC, animated: true, completion: nil)
         }
     }
-    
-    //Password walidation
-    
+    // MARK: - Password walidation
     private let requiredQuantity = 8
     
-     func hasRequiredQuantityOfCharacters(charCount: Int) -> Bool {
+    func hasRequiredQuantityOfCharacters(charCount: Int) -> Bool {
         return charCount >= requiredQuantity
     }
     
@@ -102,5 +96,4 @@ class TextFieldLogicManager {
     func isContainsUppercase(text: String) -> Bool {
         return text.contains(where: { $0.isUppercase })
     }
-    
 }

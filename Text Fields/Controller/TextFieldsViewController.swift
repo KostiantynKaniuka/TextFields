@@ -8,7 +8,7 @@
 import UIKit
 import SafariServices
 
-class TextFieldsViewController: UIViewController, UITextFieldDelegate {
+class TextFieldsViewController: UIViewController {
     @IBOutlet var scoreLb: UILabel!
     @IBOutlet var noDidgitsTF: UITextField!
     @IBOutlet var inputLimitTF: UITextField!
@@ -19,7 +19,7 @@ class TextFieldsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var min1DidgitLb: UILabel!
     @IBOutlet var min1LowerCase: UILabel!
     @IBOutlet var min1CapitalLetterLb: UILabel!
-    let model = TextFieldLogicManager()
+    @IBOutlet var progressView: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,62 +30,88 @@ class TextFieldsViewController: UIViewController, UITextFieldDelegate {
         validationRulesTF.delegate = self
         self.inputLimitTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         self.onlyCharacterTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-       
-    }
- 
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        textField.isSelected = false
-        return true
+        progressView.progress = 0
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.isSelected = true
-    }
-   
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == linkTF {
-        guard let text = textField.text else {return}
-            if let url = model.checkUrlValidation(input: text) {
-                model.openLink(url)
-            }
-        }}
-    
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        guard let text = textField.text else {return}
-        if textField == inputLimitTF{
-            textField.attributedText =  model.changeTextColor(text: text)
-        }else if textField == onlyCharacterTF {
-            if !model.isSeparatorAdded, text.count == model.separatorIndex {
-                onlyCharacterTF.text!.append(model.separator)
-            }}}
-   
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = textField.text else {fatalError()}
-        let textLength = text.count + string.count - range.length
-        guard let textRange = Range(range, in: text) else {return false}
-        let currentText = text.replacingCharacters(in: textRange, with: string)
-       
-        if noDidgitsTF == textField {
-            return model.noDigits(userInput: string)
-        }else if inputLimitTF == textField {
-            scoreLb.text = "\(model.limitInput(lengh: textLength))/10"
-            textField.attributedText =  model.changeTextColor(text: text)
-        }else if onlyCharacterTF == textField {
-            return model.isAllowedChar(text: text + string, replacementString: string)
-        }else if  textField == linkTF {
-            linkTF.autocapitalizationType = .none
-            if linkTF.text!.isEmpty {
-                linkTF.text!.append("https://")
+    let model = TextFieldLogicManager()
+    private var stepInPercentageTerms: Float = 0.25
+    private var progress: Float = 0 {
+        didSet {
+            let rules = [isMinOfCharRuleDone, isMinOfDigitsRuleDone, isMinOfLowercaseCharRuleDone, isMinOfUppercaseCharRuleDone]
+            let completedRules = rules.filter { $0 == true } .count
+            progress = Float(completedRules) * stepInPercentageTerms
+            
+            UIView.animate(withDuration: 0.9) {
+                self.progressView.setProgress(self.progress, animated: true)
+                self.updateProgressViewTintColor()
             }
         }
-        return true
     }
+    var isMinOfCharRuleDone: Bool = false {
+        didSet {
+            if isMinOfCharRuleDone {
+                min8CharactersLb.textColor = UIColor.green
+                min8CharactersLb.text = "✓ Min length 8 characters."
+                progress += 1
+            } else {
+                min8CharactersLb.textColor = UIColor.black
+                min8CharactersLb.text = "- Min length 8 characters."
+                progress -= 1
+            }
         }
-        
+    }
+    var isMinOfDigitsRuleDone: Bool = false {
+        didSet {
+            if isMinOfDigitsRuleDone {
+                min1DidgitLb.textColor = UIColor.green
+                min1DidgitLb.text = "✓ Min 1 digit,"
+                progress += 1
+            } else {
+                min1DidgitLb.textColor = UIColor.black
+                min1DidgitLb.text = "- Min 1 digit,"
+                progress -= 1
+            }
+        }
+    }
+    var isMinOfLowercaseCharRuleDone: Bool = false {
+        didSet {
+            if isMinOfLowercaseCharRuleDone {
+                min1LowerCase.textColor = UIColor.green
+                min1LowerCase.text = "✓ Min 1 lowercase,"
+                progress += 1
+            } else {
+                min1LowerCase.textColor = UIColor.black
+                min1LowerCase.text = "- Min 1 lowercase,"
+                progress -= 1
+            }
+        }
+    }
+    var isMinOfUppercaseCharRuleDone: Bool = false {
+        didSet {
+            if isMinOfUppercaseCharRuleDone {
+                min1CapitalLetterLb.textColor = UIColor.green
+                min1CapitalLetterLb.text = "✓ Min 1 capital required."
+                progress += 1
+            } else {
+                min1CapitalLetterLb.textColor = UIColor.black
+                min1CapitalLetterLb.text = "- Min 1 capital required."
+                progress -= 1
+            }
+        }
+    }
     
+    func updateProgressViewTintColor() {
+        if progressView.progress <= 0.25 {
+            progressView.progressTintColor = UIColor.red
+        } else if progressView.progress <= 0.75 {
+            progressView.progressTintColor = UIColor.orange
+        } else {
+            progressView.progressTintColor = UIColor.green
+        }
+    }
+}
+
+
 
 
 

@@ -15,6 +15,7 @@
 		E72AB8692861C4D700F1F70C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72AB8672861C4D700F1F70C /* LaunchScreen.storyboard */; };
 		E72AB8742861C4D700F1F70C /* Text_FieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB8732861C4D700F1F70C /* Text_FieldsTests.swift */; };
 		E72AB87E2861C4D700F1F70C /* Text_FieldsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB87D2861C4D700F1F70C /* Text_FieldsUITests.swift */; };
+		E7C3BBC1286619FE00D06616 /* TextFieldDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3BBC0286619FE00D06616 /* TextFieldDelegator.swift */; };
 		E7D31F7E28620A4F00849424 /* TextFieldLogicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D31F7D28620A4F00849424 /* TextFieldLogicManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		E72AB8732861C4D700F1F70C /* Text_FieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsTests.swift; sourceTree = "<group>"; };
 		E72AB8792861C4D700F1F70C /* Text FieldsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72AB87D2861C4D700F1F70C /* Text_FieldsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsUITests.swift; sourceTree = "<group>"; };
+		E7C3BBC0286619FE00D06616 /* TextFieldDelegator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegator.swift; sourceTree = "<group>"; };
 		E7D31F7D28620A4F00849424 /* TextFieldLogicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLogicManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 			children = (
 				E72AB85C2861C4D400F1F70C /* AppDelegate.swift */,
 				E72AB85E2861C4D400F1F70C /* SceneDelegate.swift */,
+				E7C3BBC0286619FE00D06616 /* TextFieldDelegator.swift */,
 				E7D31F7F28620A5A00849424 /* Model */,
 				E7D31F7C28620A0400849424 /* Controller */,
 				E7D31F7B286209F300849424 /* View */,
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C3BBC1286619FE00D06616 /* TextFieldDelegator.swift in Sources */,
 				E72AB8612861C4D400F1F70C /* TextFieldsViewController.swift in Sources */,
 				E7D31F7E28620A4F00849424 /* TextFieldLogicManager.swift in Sources */,
 				E72AB85D2861C4D400F1F70C /* AppDelegate.swift in Sources */,
