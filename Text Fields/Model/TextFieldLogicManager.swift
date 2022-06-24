@@ -84,9 +84,10 @@ class TextFieldLogicManager {
     }
     
     //Password walidation
+    
     private let requiredQuantity = 8
     
-    func hasRequiredQuantityOfCharacters(charCount: Int) -> Bool {
+     func hasRequiredQuantityOfCharacters(charCount: Int) -> Bool {
         return charCount >= requiredQuantity
     }
     

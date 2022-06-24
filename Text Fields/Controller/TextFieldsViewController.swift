@@ -9,20 +9,17 @@ import UIKit
 import SafariServices
 
 class TextFieldsViewController: UIViewController, UITextFieldDelegate {
-
-
     @IBOutlet var scoreLb: UILabel!
-    
     @IBOutlet var noDidgitsTF: UITextField!
-    
     @IBOutlet var inputLimitTF: UITextField!
-    
     @IBOutlet var onlyCharacterTF: UITextField!
-    
     @IBOutlet var linkTF: UITextField!
-    
     @IBOutlet var validationRulesTF: UITextField!
-    
+    @IBOutlet var min8CharactersLb: UILabel!
+    @IBOutlet var min1DidgitLb: UILabel!
+    @IBOutlet var min1LowerCase: UILabel!
+    @IBOutlet var min1CapitalLetterLb: UILabel!
+    let model = TextFieldLogicManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +32,7 @@ class TextFieldsViewController: UIViewController, UITextFieldDelegate {
         self.onlyCharacterTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
        
     }
- let model = TextFieldLogicManager()
+ 
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
