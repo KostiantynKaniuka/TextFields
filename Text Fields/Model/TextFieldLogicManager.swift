@@ -13,6 +13,7 @@ class TextFieldLogicManager {
     func noDigits(userInput: String) -> Bool {
         return !userInput.contains(where: {$0.isNumber})
     }
+    
     // MARK: - Input limited
     var input = 10
     
@@ -31,6 +32,7 @@ class TextFieldLogicManager {
         }
         return attributedString
     }
+    
     // MARK: - Letters-Numbers
     let separator = "-"
     let separatorIndex = 5
@@ -49,6 +51,7 @@ class TextFieldLogicManager {
         }
         return string.isEmpty || NSPredicate(format: format, regex).evaluate(with: text)
     }
+    
     // MARK: - Web Link
     func checkUrlValidation(input: String) -> String? {
         var url = String()
@@ -78,6 +81,7 @@ class TextFieldLogicManager {
             viewController.present(safariVC, animated: true, completion: nil)
         }
     }
+    
     // MARK: - Password walidation
     private let requiredQuantity = 8
     

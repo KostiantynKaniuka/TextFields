@@ -11,12 +11,12 @@
         <!--Text Fields View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TextFieldsViewController" customModule="Text_Fields" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" propertyAccessControl="all">
+                <viewController id="BYZ-38-t0r" customClass="TextFieldsViewController" customModule="Text_Fields" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" propertyAccessControl="none">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Fields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekh-6S-EWj" propertyAccessControl="all">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Fields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekh-6S-EWj" propertyAccessControl="none">
                                 <rect key="frame" x="35.5" y="86" width="343" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="0av-0Q-dSA"/>
@@ -26,10 +26,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GFL-iM-xtt" userLabel="No didgits" propertyAccessControl="all">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GFL-iM-xtt" userLabel="No didgits" propertyAccessControl="none">
                                 <rect key="frame" x="20" y="150" width="374" height="58"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO didgits fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCS-Hk-cYS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO didgits fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCS-Hk-cYS" propertyAccessControl="none">
                                         <rect key="frame" x="0.0" y="0.0" width="101" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="6hM-UQ-b1H"/>
@@ -39,23 +39,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sCP-Du-WBX">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sCP-Du-WBX" userLabel="NoDidgitsTF" propertyAccessControl="none">
                                         <rect key="frame" x="0.0" y="24" width="374" height="34"/>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="0IN-pz-XFp"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="3ss-V8-ayg"/>
+                                            <constraint firstAttribute="height" constant="34" id="0IN-pz-XFp" propertyAccessControl="none"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="3ss-V8-ayg" propertyAccessControl="none"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="mPd-Hs-E1N"/>
-                                    <constraint firstAttribute="width" constant="374" id="vKZ-oS-h3l"/>
+                                    <constraint firstAttribute="height" constant="58" id="mPd-Hs-E1N" propertyAccessControl="none"/>
+                                    <constraint firstAttribute="width" constant="374" id="vKZ-oS-h3l" propertyAccessControl="none"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qEL-vt-WBp" userLabel="Input limit" propertyAccessControl="all">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qEL-vt-WBp" userLabel="Input limit" propertyAccessControl="none">
                                 <rect key="frame" x="20" y="250" width="374" height="58"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="260" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-3X-evf">
@@ -83,7 +83,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSW-78-YEg">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSW-78-YEg" userLabel="InputLimitTF">
                                         <rect key="frame" x="0.0" y="24" width="374" height="34"/>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
@@ -99,7 +99,7 @@
                                     <constraint firstAttribute="width" constant="374" id="kjJ-Xa-Ipa"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iTp-mn-OyD" userLabel="Only characters" propertyAccessControl="all">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iTp-mn-OyD" userLabel="Only characters" propertyAccessControl="none">
                                 <rect key="frame" x="20" y="350" width="374" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scb-og-HDP">
@@ -128,7 +128,7 @@
                                     <constraint firstAttribute="height" constant="58" id="tB6-fw-fkP"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="agH-fK-A0f" userLabel="Link" propertyAccessControl="all">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="agH-fK-A0f" userLabel="Link" propertyAccessControl="none">
                                 <rect key="frame" x="20" y="450" width="374" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fud-8h-31W">
@@ -157,7 +157,7 @@
                                     <constraint firstAttribute="height" constant="58" id="A7R-5n-Bqn"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zTE-1M-URV" userLabel="Validation rules" propertyAccessControl="all">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zTE-1M-URV" userLabel="Validation rules" propertyAccessControl="none">
                                 <rect key="frame" x="20" y="550" width="374" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validation rules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txG-nd-cne">
@@ -186,7 +186,7 @@
                                     <constraint firstAttribute="width" constant="374" id="mDz-cn-han"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwO-fe-RXg" propertyAccessControl="all">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwO-fe-RXg" propertyAccessControl="none">
                                 <rect key="frame" x="20" y="622" width="226" height="94"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min 1 didgit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tID-9i-pcG">
@@ -247,7 +247,7 @@
                                     <constraint firstItem="K8d-MI-3sy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jjc-eS-lvM" secondAttribute="leading" id="tLM-0Y-HZm"/>
                                 </constraints>
                             </view>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vyG-gy-Xrx" propertyAccessControl="all">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" restorationIdentifier="progressView" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vyG-gy-Xrx" propertyAccessControl="none">
                                 <rect key="frame" x="20" y="610" width="374" height="4"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="Eb2-5G-n4p"/>
@@ -255,27 +255,27 @@
                                 </constraints>
                             </progressView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY" propertyAccessControl="all"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY" propertyAccessControl="none"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="agH-fK-A0f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="132-NS-KYt" propertyAccessControl="all"/>
-                            <constraint firstItem="GFL-iM-xtt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Bh-lk-PXv" propertyAccessControl="all"/>
-                            <constraint firstItem="ekh-6S-EWj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6EX-Rh-0IQ" propertyAccessControl="all"/>
-                            <constraint firstItem="iTp-mn-OyD" firstAttribute="top" secondItem="qEL-vt-WBp" secondAttribute="bottom" constant="42" id="7VB-Mv-lK1" propertyAccessControl="all"/>
-                            <constraint firstItem="GFL-iM-xtt" firstAttribute="top" secondItem="ekh-6S-EWj" secondAttribute="bottom" constant="23" id="7jf-Vq-wcH" propertyAccessControl="all"/>
-                            <constraint firstItem="ekh-6S-EWj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="BYn-JB-QbY" propertyAccessControl="all"/>
-                            <constraint firstItem="zTE-1M-URV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="If6-dc-S87" propertyAccessControl="all"/>
-                            <constraint firstItem="ZwO-fe-RXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ldb-LX-SiC" propertyAccessControl="all"/>
-                            <constraint firstItem="vyG-gy-Xrx" firstAttribute="top" secondItem="xAF-1r-QjG" secondAttribute="bottom" constant="2" id="Ln8-fo-oFS" propertyAccessControl="all"/>
-                            <constraint firstItem="zTE-1M-URV" firstAttribute="top" secondItem="agH-fK-A0f" secondAttribute="bottom" constant="42" id="TEL-gZ-nZv" propertyAccessControl="all"/>
-                            <constraint firstItem="vyG-gy-Xrx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aUN-xN-oEr" propertyAccessControl="all"/>
-                            <constraint firstItem="agH-fK-A0f" firstAttribute="top" secondItem="iTp-mn-OyD" secondAttribute="bottom" constant="42" id="fSB-QB-mlt" propertyAccessControl="all"/>
-                            <constraint firstItem="qEL-vt-WBp" firstAttribute="top" secondItem="GFL-iM-xtt" secondAttribute="bottom" constant="42" id="fcN-Rp-nrC" propertyAccessControl="all"/>
-                            <constraint firstItem="ZwO-fe-RXg" firstAttribute="top" secondItem="zTE-1M-URV" secondAttribute="bottom" constant="14" id="lMa-tC-dv6" propertyAccessControl="all"/>
-                            <constraint firstItem="qEL-vt-WBp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mIN-t7-0Vo" propertyAccessControl="all"/>
-                            <constraint firstItem="GFL-iM-xtt" firstAttribute="top" secondItem="ekh-6S-EWj" secondAttribute="bottom" constant="23" id="qJx-a3-KeB" propertyAccessControl="all"/>
-                            <constraint firstItem="sCP-Du-WBX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sRF-JD-6W9" propertyAccessControl="all"/>
-                            <constraint firstItem="iTp-mn-OyD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ytq-9R-1Ib" propertyAccessControl="all"/>
+                            <constraint firstItem="agH-fK-A0f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="132-NS-KYt" propertyAccessControl="none"/>
+                            <constraint firstItem="GFL-iM-xtt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Bh-lk-PXv" propertyAccessControl="none"/>
+                            <constraint firstItem="ekh-6S-EWj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6EX-Rh-0IQ" propertyAccessControl="none"/>
+                            <constraint firstItem="iTp-mn-OyD" firstAttribute="top" secondItem="qEL-vt-WBp" secondAttribute="bottom" constant="42" id="7VB-Mv-lK1" propertyAccessControl="none"/>
+                            <constraint firstItem="GFL-iM-xtt" firstAttribute="top" secondItem="ekh-6S-EWj" secondAttribute="bottom" constant="23" id="7jf-Vq-wcH" propertyAccessControl="none"/>
+                            <constraint firstItem="ekh-6S-EWj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="BYn-JB-QbY" propertyAccessControl="none"/>
+                            <constraint firstItem="zTE-1M-URV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="If6-dc-S87" propertyAccessControl="none"/>
+                            <constraint firstItem="ZwO-fe-RXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ldb-LX-SiC" propertyAccessControl="none"/>
+                            <constraint firstItem="vyG-gy-Xrx" firstAttribute="top" secondItem="xAF-1r-QjG" secondAttribute="bottom" constant="2" id="Ln8-fo-oFS" propertyAccessControl="none"/>
+                            <constraint firstItem="zTE-1M-URV" firstAttribute="top" secondItem="agH-fK-A0f" secondAttribute="bottom" constant="42" id="TEL-gZ-nZv" propertyAccessControl="none"/>
+                            <constraint firstItem="vyG-gy-Xrx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aUN-xN-oEr" propertyAccessControl="none"/>
+                            <constraint firstItem="agH-fK-A0f" firstAttribute="top" secondItem="iTp-mn-OyD" secondAttribute="bottom" constant="42" id="fSB-QB-mlt" propertyAccessControl="none"/>
+                            <constraint firstItem="qEL-vt-WBp" firstAttribute="top" secondItem="GFL-iM-xtt" secondAttribute="bottom" constant="42" id="fcN-Rp-nrC" propertyAccessControl="none"/>
+                            <constraint firstItem="ZwO-fe-RXg" firstAttribute="top" secondItem="zTE-1M-URV" secondAttribute="bottom" constant="14" id="lMa-tC-dv6" propertyAccessControl="none"/>
+                            <constraint firstItem="qEL-vt-WBp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mIN-t7-0Vo" propertyAccessControl="none"/>
+                            <constraint firstItem="GFL-iM-xtt" firstAttribute="top" secondItem="ekh-6S-EWj" secondAttribute="bottom" constant="23" id="qJx-a3-KeB" propertyAccessControl="none"/>
+                            <constraint firstItem="sCP-Du-WBX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sRF-JD-6W9" propertyAccessControl="none"/>
+                            <constraint firstItem="iTp-mn-OyD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ytq-9R-1Ib" propertyAccessControl="none"/>
                         </constraints>
                     </view>
                     <connections>
@@ -292,7 +292,7 @@
                         <outlet property="validationRulesTF" destination="xAF-1r-QjG" id="6gq-u7-8RA"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" propertyAccessControl="all" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" propertyAccessControl="none" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124.6376811594203" y="116.51785714285714"/>
         </scene>

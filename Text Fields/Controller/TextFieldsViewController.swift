@@ -51,11 +51,11 @@ class TextFieldsViewController: UIViewController {
         didSet {
             if isMinOfCharRuleDone {
                 min8CharactersLb.textColor = UIColor.green
-                min8CharactersLb.text = "✓ Min length 8 characters."
+                min8CharactersLb.text = "✓ Min length 8 characters"
                 progress += 1
             } else {
                 min8CharactersLb.textColor = UIColor.black
-                min8CharactersLb.text = "- Min length 8 characters."
+                min8CharactersLb.text = "- Min length 8 characters"
                 progress -= 1
             }
         }
@@ -64,11 +64,11 @@ class TextFieldsViewController: UIViewController {
         didSet {
             if isMinOfDigitsRuleDone {
                 min1DidgitLb.textColor = UIColor.green
-                min1DidgitLb.text = "✓ Min 1 digit,"
+                min1DidgitLb.text = "✓ Min 1 digit"
                 progress += 1
             } else {
                 min1DidgitLb.textColor = UIColor.black
-                min1DidgitLb.text = "- Min 1 digit,"
+                min1DidgitLb.text = "- Min 1 digit"
                 progress -= 1
             }
         }
@@ -77,11 +77,11 @@ class TextFieldsViewController: UIViewController {
         didSet {
             if isMinOfLowercaseCharRuleDone {
                 min1LowerCase.textColor = UIColor.green
-                min1LowerCase.text = "✓ Min 1 lowercase,"
+                min1LowerCase.text = "✓ Min 1 lowercase"
                 progress += 1
             } else {
                 min1LowerCase.textColor = UIColor.black
-                min1LowerCase.text = "- Min 1 lowercase,"
+                min1LowerCase.text = "- Min 1 lowercase"
                 progress -= 1
             }
         }
@@ -90,11 +90,11 @@ class TextFieldsViewController: UIViewController {
         didSet {
             if isMinOfUppercaseCharRuleDone {
                 min1CapitalLetterLb.textColor = UIColor.green
-                min1CapitalLetterLb.text = "✓ Min 1 capital required."
+                min1CapitalLetterLb.text = "✓ Min 1 capital required"
                 progress += 1
             } else {
                 min1CapitalLetterLb.textColor = UIColor.black
-                min1CapitalLetterLb.text = "- Min 1 capital required."
+                min1CapitalLetterLb.text = "- Min 1 capital required"
                 progress -= 1
             }
         }
