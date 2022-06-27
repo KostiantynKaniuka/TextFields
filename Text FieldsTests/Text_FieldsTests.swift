@@ -9,28 +9,80 @@ import XCTest
 @testable import Text_Fields
 
 class Text_FieldsTests: XCTestCase {
-
+    var sut: TextFieldLogicManager!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = TextFieldLogicManager()
     }
-
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    // MARK: -  No Digits Input
+    func testNodidgitsField_IgnoreDidgits() throws {
+        //Given
+        let inputWithNoDidgits = "aswe@#f"
+        let inputWithDidgits = "123dddf"
+        //Then
+        XCTAssertTrue(sut.noDigits(userInput: inputWithNoDidgits))
+        XCTAssertFalse(sut.noDigits(userInput: inputWithDidgits))
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    // MARK: - Letters-Numbers
+    func testOnlyCharactersField_IsAllowedCharacters() throws {
+        //Given
+        let allowedInput = "ABCDE-12345"
+        let notAllowedInput = "al420-ae228"
+        //Then
+        XCTAssertTrue(sut.isAllowedChar(text: allowedInput, replacementString: "0"))
+        XCTAssertFalse(sut.isAllowedChar(text: notAllowedInput, replacementString: "0"))
     }
-
+    
+    // MARK: - Web Link
+    func testLinkTextField_URLvalidation() throws {
+        //Given
+        let correctlink = "https://www.apple.com"
+        let notCorrectLink = "apple"
+        //Then
+        XCTAssertEqual(sut.checkUrlValidation(input:notCorrectLink), "")
+        XCTAssertNotNil(sut.checkUrlValidation(input:correctlink))
+    }
+    
+    // MARK: - Password walidation
+    func testValidationRulesTextField_IsMinOfCharacters() throws {
+        //Given
+        let input1 = "asdgasghasdfhgfdahdsfg"
+        let input2 = "123"
+        //Then
+        XCTAssertTrue(sut.hasRequiredQuantityOfCharacters(charCount: input1.count))
+        XCTAssertFalse(sut.hasRequiredQuantityOfCharacters(charCount: input2.count))
+    }
+    
+    func testValidationRulesTextField_IsContainsDigit() throws {
+        //Given
+        let inputContainingDigit = "123abc"
+        let inputWithoutDigits = "abc"
+        //Then
+        XCTAssertTrue(sut.isContainsDigit(text: inputContainingDigit))
+        XCTAssertFalse(sut.isContainsDigit(text: inputWithoutDigits))
+    }
+    
+    func testValidationRulesTextField_IsContainsLowercaseCharacters() throws {
+        //Given
+        let inputContainingLowercaseChar = "abcd"
+        let inputWithoutLowercaseChar = "ABCD"
+        //Then
+        XCTAssertFalse(sut.isContainsLowercase(text: inputWithoutLowercaseChar))
+        XCTAssertTrue(sut.isContainsLowercase(text: inputContainingLowercaseChar))
+    }
+    
+    func testValidationRulesTextField_IsContainsUppercaseCharacters_Rule() throws {
+        //Given
+        let inputContainingUppercaseChar = "ABCD"
+        let inputWithoutUppercaseChar = "abcd"
+        //Then
+        XCTAssertFalse(sut.isContainsUppercase(text: inputWithoutUppercaseChar))
+        XCTAssertTrue(sut.isContainsUppercase(text: inputContainingUppercaseChar))
+    }
 }
