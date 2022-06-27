@@ -28,9 +28,9 @@ extension TextFieldsViewController: UITextFieldDelegate {
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         guard let text = textField.text else {return}
-        if textField == inputLimitTF{
+        if textField == inputLimitTF {
             textField.attributedText =  model.changeTextColor(text: text)
-        }else if textField == onlyCharacterTF {
+        } else if textField == onlyCharacterTF {
             if !model.isSeparatorAdded, text.count == model.separatorIndex {
                 onlyCharacterTF.text!.append(model.separator)
             }
@@ -44,12 +44,12 @@ extension TextFieldsViewController: UITextFieldDelegate {
         let currentText = text.replacingCharacters(in: textRange, with: string)
         if noDidgitsTF == textField {
             return model.noDigits(userInput: string)
-        }else if inputLimitTF == textField {
+        } else if inputLimitTF == textField {
             scoreLb.text = "\(model.limitInput(lengh: textLength))/10"
             textField.attributedText =  model.changeTextColor(text: text)
-        }else if onlyCharacterTF == textField {
+        } else if onlyCharacterTF == textField {
             return model.isAllowedChar(text: text + string, replacementString: string)
-        }else if  textField == linkTF {
+        } else if  textField == linkTF {
             linkTF.autocapitalizationType = .none
             if linkTF.text!.isEmpty {
                 linkTF.text!.append("https://")
