@@ -32,7 +32,6 @@ final class TextFieldViewController: UIViewController {
         self.onlyCharacterTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         progressView.progress = 0
     }
-    
     let model = TextFieldValidator()
     private let stepInPercentageTerms: Float = 0.25
     private var progress: Float = 0 {
@@ -47,15 +46,16 @@ final class TextFieldViewController: UIViewController {
             }
         }
     }
+    private let labelText = ["Min lenght 8 characters", "Min 1 digit", "Min 1 lowercase", "Min 1 capital required"]
     var isMinOfCharRuleDone: Bool = false {
         didSet {
             if isMinOfCharRuleDone {
-                min8CharactersLabel.textColor = UIColor.green
-                min8CharactersLabel.text = "✓ Min length 8 characters"
+                getLabel(number: 0).textColor = UIColor.green
+                getLabel(number: 0).text = "✓ \(labelText[0])"
                 progress += 1
             } else {
-                min8CharactersLabel.textColor = UIColor.black
-                min8CharactersLabel.text = "- Min length 8 characters"
+                getLabel(number: 0).textColor = UIColor.black
+                getLabel(number: 0).text = "- \(labelText[0])"
                 progress -= 1
             }
         }
@@ -63,12 +63,12 @@ final class TextFieldViewController: UIViewController {
     var isMinOfDigitsRuleDone: Bool = false {
         didSet {
             if isMinOfDigitsRuleDone {
-                min1DidgitLabel.textColor = UIColor.green
-                min1DidgitLabel.text = "✓ Min 1 digit"
+                getLabel(number: 1).textColor = UIColor.green
+                getLabel(number: 1).text = "✓ \(labelText[1])"
                 progress += 1
             } else {
-                min1DidgitLabel.textColor = UIColor.black
-                min1DidgitLabel.text = "- Min 1 digit"
+                getLabel(number: 1).textColor = UIColor.black
+                getLabel(number: 1).text = "- \(labelText[1])"
                 progress -= 1
             }
         }
@@ -76,12 +76,12 @@ final class TextFieldViewController: UIViewController {
     var isMinOfLowercaseCharRuleDone: Bool = false {
         didSet {
             if isMinOfLowercaseCharRuleDone {
-                min1LowerCaseLabel.textColor = UIColor.green
-                min1LowerCaseLabel.text = "✓ Min 1 lowercase"
+                getLabel(number: 2).textColor = UIColor.green
+                getLabel(number: 2).text = "✓ \(labelText[2])"
                 progress += 1
             } else {
-                min1LowerCaseLabel.textColor = UIColor.black
-                min1LowerCaseLabel.text = "- Min 1 lowercase"
+                getLabel(number: 2).textColor = UIColor.black
+                getLabel(number: 2).text = "- \(labelText[2])"
                 progress -= 1
             }
         }
@@ -89,24 +89,43 @@ final class TextFieldViewController: UIViewController {
     var isMinOfUppercaseCharRuleDone: Bool = false {
         didSet {
             if isMinOfUppercaseCharRuleDone {
-                min1CapitalLetterLabel.textColor = UIColor.green
-                min1CapitalLetterLabel.text = "✓ Min 1 capital required"
+                getLabel(number: 3).textColor = UIColor.green
+                getLabel(number: 3).text = "✓ \(labelText[3])"
                 progress += 1
             } else {
-                min1CapitalLetterLabel.textColor = UIColor.black
-                min1CapitalLetterLabel.text = "- Min 1 capital required"
+                getLabel(number: 3).textColor = UIColor.black
+                getLabel(number: 3).text = "- \(labelText[3])"
                 progress -= 1
             }
         }
     }
     
-    func updateProgressViewTintColor() {
-        if progressView.progress <= 0.25 {
+    private func getLabel (number:Int) -> UILabel {
+        switch number {
+        case 0:
+            return min8CharactersLabel
+        case 1:
+            return min1DidgitLabel
+        case 2:
+            return min1LowerCaseLabel
+        case 3:
+            return min1CapitalLetterLabel
+        default:
+            break
+        }
+        return getLabel(number: 0)
+    }
+    
+    private func updateProgressViewTintColor() {
+        switch progressView.progress {
+        case 0...0.25:
             progressView.progressTintColor = UIColor.red
-        } else if progressView.progress <= 0.75 {
+        case 0.25...0.75:
             progressView.progressTintColor = UIColor.orange
-        } else {
+        case 0.75...1:
             progressView.progressTintColor = UIColor.green
+        default:
+            break
         }
     }
 }
