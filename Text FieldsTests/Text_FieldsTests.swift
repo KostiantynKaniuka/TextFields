@@ -9,10 +9,10 @@ import XCTest
 @testable import Text_Fields
 
 class Text_FieldsTests: XCTestCase {
-    var sut: TextFieldLogicManager!
+    var sut: TextFieldValidator!
     
     override func setUpWithError() throws {
-        sut = TextFieldLogicManager()
+        sut = TextFieldValidator()
     }
     
     override func tearDownWithError() throws {
@@ -25,8 +25,8 @@ class Text_FieldsTests: XCTestCase {
         let inputWithNoDidgits = "aswe@#f"
         let inputWithDidgits = "123dddf"
         //Then
-        XCTAssertTrue(sut.noDigits(userInput: inputWithNoDidgits))
-        XCTAssertFalse(sut.noDigits(userInput: inputWithDidgits))
+        XCTAssertTrue(sut.isValidNoDigitsString(userInput: inputWithNoDidgits))
+        XCTAssertFalse(sut.isValidNoDigitsString(userInput: inputWithDidgits))
     }
     
     // MARK: - Letters-Numbers
@@ -64,8 +64,8 @@ class Text_FieldsTests: XCTestCase {
         let inputContainingDigit = "123abc"
         let inputWithoutDigits = "abc"
         //Then
-        XCTAssertTrue(sut.isContainsDigit(text: inputContainingDigit))
-        XCTAssertFalse(sut.isContainsDigit(text: inputWithoutDigits))
+        XCTAssertTrue(sut.isContainigDigits(text: inputContainingDigit))
+        XCTAssertFalse(sut.isContainigDigits(text: inputWithoutDigits))
     }
     
     func testValidationRulesTextField_IsContainsLowercaseCharacters() throws {

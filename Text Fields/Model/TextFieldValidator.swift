@@ -8,10 +8,11 @@
 import UIKit
 import SafariServices
 
-class TextFieldLogicManager {
+final class TextFieldValidator {
     // MARK: -  No Digits Input
-    func noDigits(userInput: String) -> Bool {
-        return !userInput.contains(where: {$0.isNumber})
+    func isValidNoDigitsString(userInput: String) -> Bool {
+        let input = userInput.contains(where: {!$0.isNumber})
+        return input
     }
     
     // MARK: - Input limited
@@ -56,15 +57,13 @@ class TextFieldLogicManager {
     func checkUrlValidation(input: String) -> String? {
         var url = String()
         let dataDetector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
-        if let detector = dataDetector {
+        guard let detector = dataDetector else { fatalError() }
             let matches = detector.matches(in: input, options: [], range: NSRange(location: 0, length: input.utf16.count))
             for match in matches {
                 guard let range = Range(match.range, in: input) else {continue}
                 url = String(input[range])
             }
             return url
-        }
-        return nil
     }
     
     func openLink(_ stringURL: String) {
@@ -89,8 +88,8 @@ class TextFieldLogicManager {
         return charCount >= requiredQuantity
     }
     
-    func isContainsDigit(text: String) -> Bool {
-        return text.contains(where: { $0.isNumber })
+    func isContainigDigits(text: String) -> Bool {
+        return text.contains { $0.isNumber }
     }
     
     func isContainsLowercase(text: String) -> Bool {

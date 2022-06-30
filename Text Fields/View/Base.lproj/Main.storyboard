@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Text Fields View Controller-->
+        <!--Text Field View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TextFieldsViewController" customModule="Text_Fields" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TextFieldViewController" customModule="Text_Fields" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" propertyAccessControl="none">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +149,7 @@
                                             <constraint firstAttribute="height" constant="34" id="SPq-qF-qvx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -279,17 +279,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="inputLimitTF" destination="OSW-78-YEg" id="N9A-SB-Bcv"/>
-                        <outlet property="linkTF" destination="VVe-eH-Ujh" id="CU1-T2-H74"/>
-                        <outlet property="min1CapitalLetterLb" destination="K8d-MI-3sy" id="zxW-dM-lkl"/>
-                        <outlet property="min1DidgitLb" destination="tID-9i-pcG" id="Gmq-BT-jKL"/>
-                        <outlet property="min1LowerCase" destination="Jjc-eS-lvM" id="rvl-qp-v7x"/>
-                        <outlet property="min8CharactersLb" destination="wlN-ct-kyX" id="36k-4z-XMv"/>
-                        <outlet property="noDidgitsTF" destination="sCP-Du-WBX" id="F8P-Yc-djM"/>
-                        <outlet property="onlyCharacterTF" destination="0UK-Qx-hQ1" id="u1h-WX-yOb"/>
+                        <outlet property="inputLimitTextField" destination="OSW-78-YEg" id="N9A-SB-Bcv"/>
+                        <outlet property="linkTextField" destination="VVe-eH-Ujh" id="CU1-T2-H74"/>
+                        <outlet property="min1CapitalLetterLabel" destination="K8d-MI-3sy" id="zxW-dM-lkl"/>
+                        <outlet property="min1DidgitLabel" destination="tID-9i-pcG" id="Gmq-BT-jKL"/>
+                        <outlet property="min1LowerCaseLabel" destination="Jjc-eS-lvM" id="rvl-qp-v7x"/>
+                        <outlet property="min8CharactersLabel" destination="wlN-ct-kyX" id="36k-4z-XMv"/>
+                        <outlet property="noDidgitsTextField" destination="sCP-Du-WBX" id="F8P-Yc-djM"/>
+                        <outlet property="onlyCharacterTextField" destination="0UK-Qx-hQ1" id="u1h-WX-yOb"/>
                         <outlet property="progressView" destination="vyG-gy-Xrx" id="QQ1-JX-cdE"/>
-                        <outlet property="scoreLb" destination="wMJ-mO-qFA" id="bgM-9g-jyH"/>
-                        <outlet property="validationRulesTF" destination="xAF-1r-QjG" id="6gq-u7-8RA"/>
+                        <outlet property="scoreLabel" destination="wMJ-mO-qFA" id="bgM-9g-jyH"/>
+                        <outlet property="validationRulesTextField" destination="xAF-1r-QjG" id="6gq-u7-8RA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" propertyAccessControl="none" sceneMemberID="firstResponder"/>
