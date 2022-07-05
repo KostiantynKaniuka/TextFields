@@ -33,6 +33,7 @@ final class TextFieldViewController: UIViewController {
         progressView.progress = 0
     }
     let model = TextFieldValidator()
+    let textFieldUisettings = TextFieldView()
     private let stepInPercentageTerms: Float = 0.25
     private var progress: Float = 0 {
         didSet {

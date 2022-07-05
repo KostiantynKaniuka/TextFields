@@ -13,8 +13,7 @@
 		E72AB8642861C4D400F1F70C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72AB8622861C4D400F1F70C /* Main.storyboard */; };
 		E72AB8662861C4D700F1F70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72AB8652861C4D700F1F70C /* Assets.xcassets */; };
 		E72AB8692861C4D700F1F70C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72AB8672861C4D700F1F70C /* LaunchScreen.storyboard */; };
-		E72AB8742861C4D700F1F70C /* Text_FieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB8732861C4D700F1F70C /* Text_FieldsTests.swift */; };
-		E72AB87E2861C4D700F1F70C /* Text_FieldsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72AB87D2861C4D700F1F70C /* Text_FieldsUITests.swift */; };
+		E78D0CD1286E1D7000C263FC /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D0CD0286E1D7000C263FC /* TextFieldView.swift */; };
 		E7C3BBC1286619FE00D06616 /* Delegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3BBC0286619FE00D06616 /* Delegator.swift */; };
 		E7D31F7E28620A4F00849424 /* TextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D31F7D28620A4F00849424 /* TextFieldValidator.swift */; };
 /* End PBXBuildFile section */
@@ -46,9 +45,8 @@
 		E72AB8682861C4D700F1F70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E72AB86A2861C4D700F1F70C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72AB86F2861C4D700F1F70C /* Text FieldsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E72AB8732861C4D700F1F70C /* Text_FieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsTests.swift; sourceTree = "<group>"; };
 		E72AB8792861C4D700F1F70C /* Text FieldsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E72AB87D2861C4D700F1F70C /* Text_FieldsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsUITests.swift; sourceTree = "<group>"; };
+		E78D0CD0286E1D7000C263FC /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		E7C3BBC0286619FE00D06616 /* Delegator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegator.swift; sourceTree = "<group>"; };
 		E7D31F7D28620A4F00849424 /* TextFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				E72AB85B2861C4D400F1F70C /* Text Fields */,
-				E72AB8722861C4D700F1F70C /* Text FieldsTests */,
-				E72AB87C2861C4D700F1F70C /* Text FieldsUITests */,
 				E72AB85A2861C4D400F1F70C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,28 +108,13 @@
 			path = "Text Fields";
 			sourceTree = "<group>";
 		};
-		E72AB8722861C4D700F1F70C /* Text FieldsTests */ = {
-			isa = PBXGroup;
-			children = (
-				E72AB8732861C4D700F1F70C /* Text_FieldsTests.swift */,
-			);
-			path = "Text FieldsTests";
-			sourceTree = "<group>";
-		};
-		E72AB87C2861C4D700F1F70C /* Text FieldsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E72AB87D2861C4D700F1F70C /* Text_FieldsUITests.swift */,
-			);
-			path = "Text FieldsUITests";
-			sourceTree = "<group>";
-		};
 		E7D31F7B286209F300849424 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				E72AB8622861C4D400F1F70C /* Main.storyboard */,
 				E72AB8652861C4D700F1F70C /* Assets.xcassets */,
 				E72AB8672861C4D700F1F70C /* LaunchScreen.storyboard */,
+				E78D0CD0286E1D7000C263FC /* TextFieldView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +268,7 @@
 			files = (
 				E7C3BBC1286619FE00D06616 /* Delegator.swift in Sources */,
 				E72AB8612861C4D400F1F70C /* TextFieldViewController.swift in Sources */,
+				E78D0CD1286E1D7000C263FC /* TextFieldView.swift in Sources */,
 				E7D31F7E28620A4F00849424 /* TextFieldValidator.swift in Sources */,
 				E72AB85D2861C4D400F1F70C /* AppDelegate.swift in Sources */,
 				E72AB85F2861C4D400F1F70C /* SceneDelegate.swift in Sources */,
@@ -297,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E72AB8742861C4D700F1F70C /* Text_FieldsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E72AB87E2861C4D700F1F70C /* Text_FieldsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

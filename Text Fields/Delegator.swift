@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 extension TextFieldViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -21,9 +22,9 @@ extension TextFieldViewController: UITextFieldDelegate {
         if textField == linkTextField {
             guard let text = textField.text else { return }
             guard let url = model.checkUrlValidation(input: text) else { return }
-                model.openLink(url)
-            }
+            textFieldUisettings.openLink(url)
         }
+    }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         guard let text = textField.text else { return }
@@ -62,4 +63,3 @@ extension TextFieldViewController: UITextFieldDelegate {
         return true
     }
 }
-

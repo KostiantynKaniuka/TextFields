@@ -34,6 +34,7 @@ final class TextFieldValidator {
         return attributedString
     }
     
+    
     // MARK: - Letters-Numbers
     let separator = "-"
     let separatorIndex = 5
@@ -57,28 +58,13 @@ final class TextFieldValidator {
     func checkUrlValidation(input: String) -> String? {
         var url = String()
         let dataDetector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
-        guard let detector = dataDetector else { fatalError() }
-            let matches = detector.matches(in: input, options: [], range: NSRange(location: 0, length: input.utf16.count))
-            for match in matches {
-                guard let range = Range(match.range, in: input) else {continue}
-                url = String(input[range])
-            }
-            return url
-    }
-    
-    func openLink(_ stringURL: String) {
-        guard let url = URL(string: stringURL) else {return}
-        let safariVC = SFSafariViewController(url: url)
-        let keywindow = UIApplication.shared.connectedScenes.filter({$0.activationState == .foregroundActive})
-            .compactMap({$0 as? UIWindowScene})
-            .first?.windows
-            .filter({$0.isKeyWindow}).first
-        if var viewController = keywindow?.rootViewController {
-            while let presentedViewController = viewController.presentedViewController {
-                viewController = presentedViewController
-            }
-            viewController.present(safariVC, animated: true, completion: nil)
+        guard let detector = dataDetector else { fatalError("Data detector does not exist") }
+        let matches = detector.matches(in: input, options: [], range: NSRange(location: 0, length: input.utf16.count))
+        for match in matches {
+            guard let range = Range(match.range, in: input) else {continue}
+            url = String(input[range])
         }
+        return url
     }
     
     // MARK: - Password walidation
