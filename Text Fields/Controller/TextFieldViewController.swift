@@ -101,7 +101,7 @@ final class TextFieldViewController: UIViewController {
         }
     }
     
-    private func getLabel (number:Int) -> UILabel {
+    private func getLabel(number: Int) -> UILabel {
         switch number {
         case 0:
             return min8CharactersLabel
@@ -112,9 +112,8 @@ final class TextFieldViewController: UIViewController {
         case 3:
             return min1CapitalLetterLabel
         default:
-            break
+            return getLabel(number: 0)
         }
-        return getLabel(number: 0)
     }
     
     private func updateProgressViewTintColor() {

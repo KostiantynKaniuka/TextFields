@@ -19,11 +19,10 @@ extension TextFieldViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == linkTextField {
-            guard let text = textField.text else { return }
-            guard let url = model.checkUrlValidation(input: text) else { return }
-            textFieldUisettings.openLink(url)
-        }
+        guard textField == linkTextField,
+              let text = textField.text,
+              let url = model.checkUrlValidation(input: text) else { return }
+        textFieldUisettings.openLink(url)
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -49,14 +48,14 @@ extension TextFieldViewController: UITextFieldDelegate {
             textField.attributedText =  model.changeTextColor(text: text)
         } else if onlyCharacterTextField == textField {
             return model.isAllowedChar(text: text + string, replacementString: string)
-        } else if  textField == linkTextField {
+        } else if textField == linkTextField {
             linkTextField.autocapitalizationType = .none
             if linkTextField.text!.isEmpty {
-                linkTextField.text!.append("https://")
+                linkTextField.text?.append("https://")
             }
         } else if textField == validationRulesTextField {
             isMinOfCharRuleDone = model.hasRequiredQuantityOfCharacters(charCount: textLength)
-            isMinOfDigitsRuleDone = model.isContainigDigits(text: currentText)
+            isMinOfDigitsRuleDone = model.isContainingDigits(text: currentText)
             isMinOfLowercaseCharRuleDone = model.isContainsLowercase(text: currentText)
             isMinOfUppercaseCharRuleDone = model.isContainsUppercase(text: currentText)
         }

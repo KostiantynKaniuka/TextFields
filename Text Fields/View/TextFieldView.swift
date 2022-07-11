@@ -11,7 +11,7 @@ import SafariServices
 final class TextFieldView {
     
     func openLink(_ stringURL: String) {
-        guard let url = URL(string: stringURL) else {return}
+        guard let url = URL(string: stringURL) else { return }
         let safariVC = SFSafariViewController(url: url)
         let keywindow = UIApplication.shared.connectedScenes.filter({$0.activationState == .foregroundActive})
             .compactMap({$0 as? UIWindowScene})
