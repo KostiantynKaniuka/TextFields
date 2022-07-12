@@ -14,19 +14,21 @@
 		E72AB8662861C4D700F1F70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72AB8652861C4D700F1F70C /* Assets.xcassets */; };
 		E72AB8692861C4D700F1F70C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72AB8672861C4D700F1F70C /* LaunchScreen.storyboard */; };
 		E78D0CD1286E1D7000C263FC /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D0CD0286E1D7000C263FC /* TextFieldView.swift */; };
+		E7B26F63287D83ED009E9F30 /* Text_FieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B26F62287D83ED009E9F30 /* Text_FieldsTests.swift */; };
+		E7B26F70287D9EEA009E9F30 /* Text_FieldsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B26F6F287D9EEA009E9F30 /* Text_FieldsUITests.swift */; };
 		E7C3BBC1286619FE00D06616 /* Delegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3BBC0286619FE00D06616 /* Delegator.swift */; };
 		E7D31F7E28620A4F00849424 /* TextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D31F7D28620A4F00849424 /* TextFieldValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E72AB8702861C4D700F1F70C /* PBXContainerItemProxy */ = {
+		E7B26F64287D83ED009E9F30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E72AB8512861C4D400F1F70C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E72AB8582861C4D400F1F70C;
 			remoteInfo = "Text Fields";
 		};
-		E72AB87A2861C4D700F1F70C /* PBXContainerItemProxy */ = {
+		E7B26F73287D9EEA009E9F30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E72AB8512861C4D400F1F70C /* Project object */;
 			proxyType = 1;
@@ -44,9 +46,11 @@
 		E72AB8652861C4D700F1F70C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E72AB8682861C4D700F1F70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E72AB86A2861C4D700F1F70C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E72AB86F2861C4D700F1F70C /* Text FieldsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E72AB8792861C4D700F1F70C /* Text FieldsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78D0CD0286E1D7000C263FC /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		E7B26F60287D83ED009E9F30 /* Text FieldsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B26F62287D83ED009E9F30 /* Text_FieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsTests.swift; sourceTree = "<group>"; };
+		E7B26F6D287D9EEA009E9F30 /* Text FieldsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B26F6F287D9EEA009E9F30 /* Text_FieldsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsUITests.swift; sourceTree = "<group>"; };
 		E7C3BBC0286619FE00D06616 /* Delegator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegator.swift; sourceTree = "<group>"; };
 		E7D31F7D28620A4F00849424 /* TextFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,14 +63,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E72AB86C2861C4D700F1F70C /* Frameworks */ = {
+		E7B26F5D287D83ED009E9F30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E72AB8762861C4D700F1F70C /* Frameworks */ = {
+		E7B26F6A287D9EEA009E9F30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				E72AB85B2861C4D400F1F70C /* Text Fields */,
+				E7B26F61287D83ED009E9F30 /* Text FieldsTests */,
+				E7B26F6E287D9EEA009E9F30 /* Text FieldsUITests */,
 				E72AB85A2861C4D400F1F70C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				E72AB8592861C4D400F1F70C /* Text Fields.app */,
-				E72AB86F2861C4D700F1F70C /* Text FieldsTests.xctest */,
-				E72AB8792861C4D700F1F70C /* Text FieldsUITests.xctest */,
+				E7B26F60287D83ED009E9F30 /* Text FieldsTests.xctest */,
+				E7B26F6D287D9EEA009E9F30 /* Text FieldsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +112,22 @@
 				E72AB86A2861C4D700F1F70C /* Info.plist */,
 			);
 			path = "Text Fields";
+			sourceTree = "<group>";
+		};
+		E7B26F61287D83ED009E9F30 /* Text FieldsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7B26F62287D83ED009E9F30 /* Text_FieldsTests.swift */,
+			);
+			path = "Text FieldsTests";
+			sourceTree = "<group>";
+		};
+		E7B26F6E287D9EEA009E9F30 /* Text FieldsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7B26F6F287D9EEA009E9F30 /* Text_FieldsUITests.swift */,
+			);
+			path = "Text FieldsUITests";
 			sourceTree = "<group>";
 		};
 		E7D31F7B286209F300849424 /* View */ = {
@@ -155,40 +177,40 @@
 			productReference = E72AB8592861C4D400F1F70C /* Text Fields.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E72AB86E2861C4D700F1F70C /* Text FieldsTests */ = {
+		E7B26F5F287D83ED009E9F30 /* Text FieldsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E72AB8862861C4D700F1F70C /* Build configuration list for PBXNativeTarget "Text FieldsTests" */;
+			buildConfigurationList = E7B26F66287D83ED009E9F30 /* Build configuration list for PBXNativeTarget "Text FieldsTests" */;
 			buildPhases = (
-				E72AB86B2861C4D700F1F70C /* Sources */,
-				E72AB86C2861C4D700F1F70C /* Frameworks */,
-				E72AB86D2861C4D700F1F70C /* Resources */,
+				E7B26F5C287D83ED009E9F30 /* Sources */,
+				E7B26F5D287D83ED009E9F30 /* Frameworks */,
+				E7B26F5E287D83ED009E9F30 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E72AB8712861C4D700F1F70C /* PBXTargetDependency */,
+				E7B26F65287D83ED009E9F30 /* PBXTargetDependency */,
 			);
 			name = "Text FieldsTests";
 			productName = "Text FieldsTests";
-			productReference = E72AB86F2861C4D700F1F70C /* Text FieldsTests.xctest */;
+			productReference = E7B26F60287D83ED009E9F30 /* Text FieldsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E72AB8782861C4D700F1F70C /* Text FieldsUITests */ = {
+		E7B26F6C287D9EEA009E9F30 /* Text FieldsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E72AB8892861C4D700F1F70C /* Build configuration list for PBXNativeTarget "Text FieldsUITests" */;
+			buildConfigurationList = E7B26F75287D9EEA009E9F30 /* Build configuration list for PBXNativeTarget "Text FieldsUITests" */;
 			buildPhases = (
-				E72AB8752861C4D700F1F70C /* Sources */,
-				E72AB8762861C4D700F1F70C /* Frameworks */,
-				E72AB8772861C4D700F1F70C /* Resources */,
+				E7B26F69287D9EEA009E9F30 /* Sources */,
+				E7B26F6A287D9EEA009E9F30 /* Frameworks */,
+				E7B26F6B287D9EEA009E9F30 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E72AB87B2861C4D700F1F70C /* PBXTargetDependency */,
+				E7B26F74287D9EEA009E9F30 /* PBXTargetDependency */,
 			);
 			name = "Text FieldsUITests";
 			productName = "Text FieldsUITests";
-			productReference = E72AB8792861C4D700F1F70C /* Text FieldsUITests.xctest */;
+			productReference = E7B26F6D287D9EEA009E9F30 /* Text FieldsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -204,12 +226,12 @@
 					E72AB8582861C4D400F1F70C = {
 						CreatedOnToolsVersion = 13.4;
 					};
-					E72AB86E2861C4D700F1F70C = {
-						CreatedOnToolsVersion = 13.4;
+					E7B26F5F287D83ED009E9F30 = {
+						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = E72AB8582861C4D400F1F70C;
 					};
-					E72AB8782861C4D700F1F70C = {
-						CreatedOnToolsVersion = 13.4;
+					E7B26F6C287D9EEA009E9F30 = {
+						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = E72AB8582861C4D400F1F70C;
 					};
 				};
@@ -228,8 +250,8 @@
 			projectRoot = "";
 			targets = (
 				E72AB8582861C4D400F1F70C /* Text Fields */,
-				E72AB86E2861C4D700F1F70C /* Text FieldsTests */,
-				E72AB8782861C4D700F1F70C /* Text FieldsUITests */,
+				E7B26F5F287D83ED009E9F30 /* Text FieldsTests */,
+				E7B26F6C287D9EEA009E9F30 /* Text FieldsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,14 +267,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E72AB86D2861C4D700F1F70C /* Resources */ = {
+		E7B26F5E287D83ED009E9F30 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E72AB8772861C4D700F1F70C /* Resources */ = {
+		E7B26F6B287D9EEA009E9F30 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,32 +297,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E72AB86B2861C4D700F1F70C /* Sources */ = {
+		E7B26F5C287D83ED009E9F30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B26F63287D83ED009E9F30 /* Text_FieldsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E72AB8752861C4D700F1F70C /* Sources */ = {
+		E7B26F69287D9EEA009E9F30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B26F70287D9EEA009E9F30 /* Text_FieldsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E72AB8712861C4D700F1F70C /* PBXTargetDependency */ = {
+		E7B26F65287D83ED009E9F30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E72AB8582861C4D400F1F70C /* Text Fields */;
-			targetProxy = E72AB8702861C4D700F1F70C /* PBXContainerItemProxy */;
+			targetProxy = E7B26F64287D83ED009E9F30 /* PBXContainerItemProxy */;
 		};
-		E72AB87B2861C4D700F1F70C /* PBXTargetDependency */ = {
+		E7B26F74287D9EEA009E9F30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E72AB8582861C4D400F1F70C /* Text Fields */;
-			targetProxy = E72AB87A2861C4D700F1F70C /* PBXContainerItemProxy */;
+			targetProxy = E7B26F73287D9EEA009E9F30 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -494,16 +518,14 @@
 			};
 			name = Release;
 		};
-		E72AB8872861C4D700F1F70C /* Debug */ = {
+		E7B26F67287D83ED009E9F30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 882F2W2464;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kostiantynkaniuka.Text-FieldsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,16 +536,14 @@
 			};
 			name = Debug;
 		};
-		E72AB8882861C4D700F1F70C /* Release */ = {
+		E7B26F68287D83ED009E9F30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 882F2W2464;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kostiantynkaniuka.Text-FieldsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,10 +554,9 @@
 			};
 			name = Release;
 		};
-		E72AB88A2861C4D700F1F70C /* Debug */ = {
+		E7B26F76287D9EEA009E9F30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 882F2W2464;
@@ -552,10 +571,9 @@
 			};
 			name = Debug;
 		};
-		E72AB88B2861C4D700F1F70C /* Release */ = {
+		E7B26F77287D9EEA009E9F30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 882F2W2464;
@@ -591,20 +609,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E72AB8862861C4D700F1F70C /* Build configuration list for PBXNativeTarget "Text FieldsTests" */ = {
+		E7B26F66287D83ED009E9F30 /* Build configuration list for PBXNativeTarget "Text FieldsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E72AB8872861C4D700F1F70C /* Debug */,
-				E72AB8882861C4D700F1F70C /* Release */,
+				E7B26F67287D83ED009E9F30 /* Debug */,
+				E7B26F68287D83ED009E9F30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E72AB8892861C4D700F1F70C /* Build configuration list for PBXNativeTarget "Text FieldsUITests" */ = {
+		E7B26F75287D9EEA009E9F30 /* Build configuration list for PBXNativeTarget "Text FieldsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E72AB88A2861C4D700F1F70C /* Debug */,
-				E72AB88B2861C4D700F1F70C /* Release */,
+				E7B26F76287D9EEA009E9F30 /* Debug */,
+				E7B26F77287D9EEA009E9F30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

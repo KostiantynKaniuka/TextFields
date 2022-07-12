@@ -11,7 +11,7 @@ import SafariServices
 final class TextFieldValidator {
     // MARK: -  No Digits Input
     func isValidNoDigitsString(userInput: String) -> Bool {
-        let input = userInput.contains(where: { !$0.isNumber })
+        let input = !userInput.contains(where: {$0.isNumber})
         return input
     }
     

@@ -32,6 +32,7 @@ final class TextFieldViewController: UIViewController {
         self.onlyCharacterTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         progressView.progress = 0
     }
+    
     let model = TextFieldValidator()
     let textFieldUisettings = TextFieldView()
     private let stepInPercentageTerms: Float = 0.25
@@ -60,7 +61,7 @@ final class TextFieldViewController: UIViewController {
     private func getText() -> String {
         switch inputText {
         case .minLenght8Characters:
-            return "Min lenght 8 characters"
+            return "Min lengh 8 characters"
         case .min1Digit:
             return "Min 1 digit"
         case .min1LowerCase:
