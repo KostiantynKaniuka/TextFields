@@ -47,55 +47,81 @@ final class TextFieldViewController: UIViewController {
             }
         }
     }
-    private let labelText = ["Min lenght 8 characters", "Min 1 digit", "Min 1 lowercase", "Min 1 capital required"]
+    
+    enum labelText {
+        case minLenght8Characters
+        case min1Digit
+        case min1LowerCase
+        case min1CapitalRequired
+    }
+    
+    var inputText: labelText = .min1CapitalRequired
+    
+    private func getText() -> String {
+        switch inputText {
+        case .minLenght8Characters:
+            return "Min lenght 8 characters"
+        case .min1Digit:
+            return "Min 1 digit"
+        case .min1LowerCase:
+            return "Min 1 lowercase"
+        case .min1CapitalRequired:
+            return  "Min 1 capital required"
+        }
+    }
+    
     var isMinOfCharRuleDone: Bool = false {
         didSet {
+            inputText = .minLenght8Characters
             if isMinOfCharRuleDone {
                 getLabel(number: 0).textColor = UIColor.green
-                getLabel(number: 0).text = "✓ \(labelText[0])"
+                getLabel(number: 0).text = "✓ \(getText())"
                 progress += 1
             } else {
                 getLabel(number: 0).textColor = UIColor.black
-                getLabel(number: 0).text = "- \(labelText[0])"
+                getLabel(number: 0).text = "- \(getText())"
                 progress -= 1
             }
         }
     }
     var isMinOfDigitsRuleDone: Bool = false {
         didSet {
+            inputText = .min1Digit
             if isMinOfDigitsRuleDone {
                 getLabel(number: 1).textColor = UIColor.green
-                getLabel(number: 1).text = "✓ \(labelText[1])"
+                getLabel(number: 1).text = "✓ \(getText())"
                 progress += 1
             } else {
                 getLabel(number: 1).textColor = UIColor.black
-                getLabel(number: 1).text = "- \(labelText[1])"
+                getLabel(number: 1).text = "- \(getText())"
                 progress -= 1
             }
         }
     }
     var isMinOfLowercaseCharRuleDone: Bool = false {
         didSet {
+            inputText = .min1LowerCase
             if isMinOfLowercaseCharRuleDone {
                 getLabel(number: 2).textColor = UIColor.green
-                getLabel(number: 2).text = "✓ \(labelText[2])"
+                getLabel(number: 2).text = "✓ \(getText())"
                 progress += 1
             } else {
                 getLabel(number: 2).textColor = UIColor.black
-                getLabel(number: 2).text = "- \(labelText[2])"
+                getLabel(number: 2).text = "- \(getText())"
                 progress -= 1
             }
         }
     }
     var isMinOfUppercaseCharRuleDone: Bool = false {
         didSet {
+            inputText = .min1CapitalRequired
             if isMinOfUppercaseCharRuleDone {
                 getLabel(number: 3).textColor = UIColor.green
-                getLabel(number: 3).text = "✓ \(labelText[3])"
+                getLabel(number: 3).text = "✓ \(getText())"
                 progress += 1
             } else {
                 getLabel(number: 3).textColor = UIColor.black
-                getLabel(number: 3).text = "- \(labelText[3])"
+                getLabel(number: 3).text = "- \(getText())"
                 progress -= 1
             }
         }
